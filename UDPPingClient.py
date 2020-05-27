@@ -16,7 +16,7 @@ for ping in range(noPings):
     #Getting the current time
     messageSendTime = time.time() * 1;
     # Printing ping message time is in ms.
-    print("Ping " + str(pring) + " " + str(messageSendTime));
+    print("Ping " + str(ping) + " " + str(messageSendTime));
     # Creating client socket
     clientSocket = socket(AF_INET, SOCK_DGRAM);
     # Setting a timeout to stop waiting for the packet to be recieved if its lost.

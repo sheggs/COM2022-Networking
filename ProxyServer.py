@@ -6,7 +6,7 @@ if len(sys.argv) <= 1:
 	print('Usage : "python ProxyServer.py server_ip"\n[server_ip : It is the IP Address Of Proxy Server')
 	sys.exit(2)
 print(sys.argv[1])
-port = 6060;
+port = 5050;
 print("Proxy started on port ",port)
 # Create a server socket, bind it to a port and start listening
 tcpSerSock = socket(AF_INET, SOCK_STREAM)
@@ -24,7 +24,7 @@ while 1:
 	print("Connected.");
 	message = tcpCliSock.recv(port);
 	#print(message);
-	filename = message.split()[1].partition("/")[2];
+	filename = message.split()[1].partition("//")[2];
 	print(filename)
 	fileExist = "false"
 	filetouse = "/" + filename
